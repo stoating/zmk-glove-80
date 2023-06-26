@@ -5,16 +5,19 @@
         combo_1527 {
             timeout-ms = <75>;
             key-positions = <15 27>;
+            layers = <0>;
             bindings = <&kp LBRC>;
         };
         combo_2739 {
             timeout-ms = <75>;
             key-positions = <27 39>;
+            layers = <0>;
             bindings = <&kp LPAR>;
         };
         combo_3951 {
             timeout-ms = <75>;
             key-positions = <39 51>;
+            layers = <0>;
             bindings = <&kp LBKT>;
         };
 
@@ -22,16 +25,19 @@
         combo_1628 {
             timeout-ms = <75>;
             key-positions = <16 28>;
+            layers = <0>;
             bindings = <&kp RBRC>;
         };
         combo_2840 {
             timeout-ms = <75>;
             key-positions = <28 40>;
+            layers = <0>;
             bindings = <&kp RPAR>;
         };
         combo_4058 {
             timeout-ms = <75>;
             key-positions = <40 58>;
+            layers = <0>;
             bindings = <&kp RBKT>;
         };
 
@@ -40,24 +46,28 @@
         combo_3547 {
             timeout-ms = <75>;
             key-positions = <35 47>;
+            layers = <0>;
             bindings = <&de_ael>;
         };
         // ö
         combo_4462 {
             timeout-ms = <75>;
             key-positions = <44 62>;
+            layers = <0>;
             bindings = <&de_oel>;
         };
         // ü
         combo_3042 {
             timeout-ms = <75>;
             key-positions = <30 42>;
+            layers = <0>;
             bindings = <&de_uel>;
         };
         // ß
         combo_3749 {
             timeout-ms = <75>;
             key-positions = <37 49>;
+            layers = <0>;
             bindings = <&de_ss>;
         };
 
@@ -66,33 +76,39 @@
         combo_523547 {
             timeout-ms = <75>;
             key-positions = <52 35 47>;
+            layers = <0>;
             bindings = <&de_aeu>;
         };
         combo_573547 {
             timeout-ms = <75>;
             key-positions = <57 35 47>;
+            layers = <0>;
             bindings = <&de_aeu>;
         };
         // Ö
         combo_524462 {
             timeout-ms = <75>;
             key-positions = <52 44 62>;
+            layers = <0>;
             bindings = <&de_oeu>;
         };
         combo_574462 {
             timeout-ms = <75>;
             key-positions = <57 44 62>;
+            layers = <0>;
             bindings = <&de_oeu>;
         };
         // Ü
         combo_523042 {
             timeout-ms = <75>;
             key-positions = <52 30 42>;
+            layers = <0>;
             bindings = <&de_ueu>;
         };
         combo_573042 {
             timeout-ms = <75>;
             key-positions = <57 30 42>;
+            layers = <0>;
             bindings = <&de_ueu>;
         };
     };
