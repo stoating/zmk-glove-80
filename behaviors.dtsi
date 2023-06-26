@@ -1,0 +1,102 @@
+    combos { // binding indexes are 0-based
+        compatible = "zmk,combos";
+
+        #define COMBO_TIMEOUT 50
+
+        #define COMBO_K2_B1(suffix, k1, k2, b1) \
+            combo_##suffix { \
+                timeout-ms = <COMBO_TIMEOUT>; \
+                key-positions = <k1 k2>; \
+                bindings = <b1>; \
+            };
+
+        #define COMBO_K3_B1(suffix, k1, k2, k3, b1) \
+            combo_##suffix { \
+                timeout-ms = <COMBO_TIMEOUT>; \
+                key-positions = <k1 k2 k3>; \
+                bindings = <b1>; \
+            };
+
+        // Vertical combos
+        COMBO_K2_B1(fiveb, 35, 47, LBRC) // {
+        COMBO_K2_B1(bg   , 29, 41, LPAR) // (
+        COMBO_K2_B1(gv   , 31, 43, LBKT) // [
+        COMBO_K2_B1(sixj , 36, 48, RBRC) // }
+        COMBO_K2_B1(jm   , 25, 37, RPAR) // )
+        COMBO_K2_B1(mk   , 25, 37, RBKT) // ]
+
+        COMBO_K2_B1(az   , 25, 37, de_ael) // ä
+        COMBO_K2_B1(o1   , 25, 37, de_oel) // ö
+        COMBO_K2_B1(ue   , 25, 37, de_uel) // ü
+        COMBO_K2_B1(sc   , 25, 37, de_ss)  // ß
+        COMBO_K3_B1(saz  , 25, 25, 37, de_aeu) // Ä
+        COMBO_K3_B1(so1  , 25, 25, 37, de_oeu) // Ö
+        COMBO_K3_B1(sue  , 25, 25, 37, de_ueu) // Ü
+    };
+
+    macros {
+
+        DE_AEL(de_ael,
+        wait-ms = <30>;
+        tap-ms = <40>;
+        bindings = <&macro_press   &kp LALT>
+                 , <&macro_tap     &kp KP_N1 &kp KP_N3 &kp KP_N2>
+                 , <&macro_release &kp LALT>
+                 ;
+        )
+
+        DE_AEU(de_aeu,
+        wait-ms = <30>;
+        tap-ms = <40>;
+        bindings = <&macro_press   &kp LALT>
+                 , <&macro_tap     &kp KP_N1 &kp KP_N4 &kp KP_N2>
+                 , <&macro_release &kp LALT>
+                 ;
+        )
+
+        DE_OEL(de_oel,
+        wait-ms = <30>;
+        tap-ms = <40>;
+        bindings = <&macro_press   &kp LALT>
+                 , <&macro_tap     &kp KP_N1 &kp KP_N4 &kp KP_N8>
+                 , <&macro_release &kp LALT>
+                 ;
+        )
+
+        DE_OEU(de_oeu,
+        wait-ms = <30>;
+        tap-ms = <40>;
+        bindings = <&macro_press   &kp LALT>
+                 , <&macro_tap     &kp KP_N1 &kp KP_N5 &kp KP_N3>
+                 , <&macro_release &kp LALT>
+                 ;
+        )
+
+        DE_UEL(de_uel,
+        wait-ms = <30>;
+        tap-ms = <40>;
+        bindings = <&macro_press   &kp LALT>
+                 , <&macro_tap     &kp KP_N1 &kp KP_N2 &kp KP_N9>
+                 , <&macro_release &kp LALT>
+                 ;
+        )
+
+        DE_UEU(de_ueu,
+        wait-ms = <30>;
+        tap-ms = <40>;
+        bindings = <&macro_press   &kp LALT>
+                 , <&macro_tap     &kp KP_N1 &kp KP_N5 &kp KP_N4>
+                 , <&macro_release &kp LALT>
+                 ;
+        )
+
+        DE_SS(de_ss,
+        wait-ms = <30>;
+        tap-ms = <40>;
+        bindings = <&macro_press   &kp LALT>
+                 , <&macro_tap     &kp KP_N0 &kp KP_N2 &kp KP_N2 &kp KP_N3>
+                 , <&macro_release &kp LALT>
+                 ;
+        )
+
+    };

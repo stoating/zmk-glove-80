@@ -1,0 +1,179 @@
+    combos { // binding indexes are 0-based
+        compatible = "zmk,combos";
+
+        // Left Parens
+        combo_1527 {
+            timeout-ms = <75>;
+            key-positions = <15 27>;
+            bindings = <&kp LBRC>;
+        };
+        combo_2739 {
+            timeout-ms = <75>;
+            key-positions = <27 39>;
+            bindings = <&kp LPAR>;
+        };
+        combo_3951 {
+            timeout-ms = <75>;
+            key-positions = <39 51>;
+            bindings = <&kp LBKT>;
+        };
+
+        // Right Parens
+        combo_1628 {
+            timeout-ms = <75>;
+            key-positions = <16 28>;
+            bindings = <&kp RBRC>;
+        };
+        combo_2840 {
+            timeout-ms = <75>;
+            key-positions = <28 40>;
+            bindings = <&kp RPAR>;
+        };
+        combo_4058 {
+            timeout-ms = <75>;
+            key-positions = <40 58>;
+            bindings = <&kp RBKT>;
+        };
+
+        // Umlauts Small
+        // ä
+        combo_3547 {
+            timeout-ms = <75>;
+            key-positions = <35 47>;
+            bindings = <&de_ael>;
+        };
+        // ö
+        combo_4462 {
+            timeout-ms = <75>;
+            key-positions = <44 62>;
+            bindings = <&de_oel>;
+        };
+        // ü
+        combo_3042 {
+            timeout-ms = <75>;
+            key-positions = <30 42>;
+            bindings = <&de_uel>;
+        };
+        // ß
+        combo_3749 {
+            timeout-ms = <75>;
+            key-positions = <37 49>;
+            bindings = <&de_ss>;
+        };
+
+        // Umlauts Large
+        // Ä
+        combo_523547 {
+            timeout-ms = <75>;
+            key-positions = <52 35 47>;
+            bindings = <&de_aeu>;
+        };
+        combo_573547 {
+            timeout-ms = <75>;
+            key-positions = <57 35 47>;
+            bindings = <&de_aeu>;
+        };
+        // Ö
+        combo_524462 {
+            timeout-ms = <75>;
+            key-positions = <52 44 62>;
+            bindings = <&de_oeu>;
+        };
+        combo_574462 {
+            timeout-ms = <75>;
+            key-positions = <57 44 62>;
+            bindings = <&de_oeu>;
+        };
+        // Ü
+        combo_523042 {
+            timeout-ms = <75>;
+            key-positions = <52 30 42>;
+            bindings = <&de_ueu>;
+        };
+        combo_573042 {
+            timeout-ms = <75>;
+            key-positions = <57 30 42>;
+            bindings = <&de_ueu>;
+        };
+    };
+
+    macros {
+
+        de_ael: de_ael{
+            compatible = "zmk,behavior-macro";
+            label = "ZM_de_ael";
+            #binding-cells = <0>;
+            wait-ms = <30>;
+            tap-ms = <40>;
+            bindings = <&macro_press   &kp LALT>
+                     , <&macro_tap     &kp KP_N1 &kp KP_N3 &kp KP_N2>
+                     , <&macro_release &kp LALT>;
+        };
+
+        de_aeu: de_aeu{
+            compatible = "zmk,behavior-macro";
+            label = "ZM_de_aeu";
+            #binding-cells = <0>;
+            wait-ms = <30>;
+            tap-ms = <40>;
+            bindings = <&macro_press   &kp LALT>
+                     , <&macro_tap     &kp KP_N1 &kp KP_N4 &kp KP_N2>
+                     , <&macro_release &kp LALT>;
+        };
+
+        de_oel: de_oel{
+            compatible = "zmk,behavior-macro";
+            label = "ZM_de_oel";
+            #binding-cells = <0>;
+            wait-ms = <30>;
+            tap-ms = <40>;
+            bindings = <&macro_press   &kp LALT>
+                     , <&macro_tap     &kp KP_N1 &kp KP_N4 &kp KP_N8>
+                     , <&macro_release &kp LALT>;
+        };
+
+        de_oeu: de_oeu{
+            compatible = "zmk,behavior-macro";
+            label = "ZM_de_oeu";
+            #binding-cells = <0>;
+            wait-ms = <30>;
+            tap-ms = <40>;
+            bindings = <&macro_press   &kp LALT>
+                     , <&macro_tap     &kp KP_N1 &kp KP_N5 &kp KP_N3>
+                     , <&macro_release &kp LALT>;
+        };
+
+        de_uel: de_uel{
+            compatible = "zmk,behavior-macro";
+            label = "ZM_de_uel";
+            #binding-cells = <0>;
+            wait-ms = <30>;
+            tap-ms = <40>;
+            bindings = <&macro_press   &kp LALT>
+                     , <&macro_tap     &kp KP_N1 &kp KP_N2 &kp KP_N9>
+                     , <&macro_release &kp LALT>;
+        };
+
+        de_ueu: de_ueu{
+            compatible = "zmk,behavior-macro";
+            label = "ZM_de_ueu";
+            #binding-cells = <0>;
+            wait-ms = <30>;
+            tap-ms = <40>;
+            bindings = <&macro_press   &kp LALT>
+                     , <&macro_tap     &kp KP_N1 &kp KP_N5 &kp KP_N4>
+                     , <&macro_release &kp LALT>;
+        };
+
+        de_ss: de_ss{
+            compatible = "zmk,behavior-macro";
+            label = "ZM_de_ss";
+            #binding-cells = <0>;
+            wait-ms = <30>;
+            tap-ms = <40>;
+            bindings = <&macro_press   &kp LALT>
+                     , <&macro_tap     &kp KP_N0 &kp KP_N2 &kp KP_N2 &kp KP_N3>
+                     , <&macro_release &kp LALT>;
+        };
+
+    };
