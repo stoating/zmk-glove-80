@@ -1,195 +1,212 @@
-    combos { // binding indexes are 0-based
-        compatible = "zmk,combos";
+//        Mapping
+// DEU | ENG       | NAME
+//  y  |  z        | z
+#define m_de_y       z
+//  z  |  y        | y
+#define m_de_z       y
 
-        // Left Parens
-        combo_1527 {
-            timeout-ms = <75>;
-            key-positions = <15 27>;
-            layers = <0>;
-            bindings = <&kp LBRC>;
-        };
-        combo_2739 {
-            timeout-ms = <75>;
-            key-positions = <27 39>;
-            layers = <0>;
-            bindings = <&kp LPAR>;
-        };
-        combo_3951 {
-            timeout-ms = <75>;
-            key-positions = <39 51>;
-            layers = <0>;
-            bindings = <&kp LBKT>;
-        };
+//  ä  |  '        | SQT
+#define m_de_ael     SQT
+//  Ä  |  "        | DQT
+#define m_de_aeu     DQT
+//  ö  |  ;        | SEMI
+#define m_de_oel     SEMI
+//  Ö  |  :        | COLON
+#define m_de_oeu     COLON
+//  ü  |  [        | LBKT
+#define m_de_uel     LBKT
+//  Ü  |  {        | LBRC
+#define m_de_ueu     LBRC
+//  ß  |  -        | MINUS
+#define de_sz        MINUS
 
-        // Right Parens
-        combo_1628 {
-            timeout-ms = <75>;
-            key-positions = <16 28>;
-            layers = <0>;
-            bindings = <&kp RBRC>;
-        };
-        combo_2840 {
-            timeout-ms = <75>;
-            key-positions = <28 40>;
-            layers = <0>;
-            bindings = <&kp RPAR>;
-        };
-        combo_4058 {
-            timeout-ms = <75>;
-            key-positions = <40 58>;
-            layers = <0>;
-            bindings = <&kp RBKT>;
-        };
+//  ^  |  `        | GRAVE
+#define de_carat     GRAVE
+//  °  |  ~        | TILDE
+#define de_deg       TILDE
+//  !  |  !        | EXCL
+#define de_excl      EXCL
+//  "  |  @        | AT
+#define de_dqt       AT
+//  ²  |  alt+235  | alt+235
+#define m_de_ss_tw   &kp KP_N2 &kp KP_N3 &kp KP_N5
+//  ³  |  alt+0179 | alt+0179
+#define m_de_ss_tr   &kp KP_N0 &kp KP_N1 &kp KP_N7 &kp KP_N9
+//  §  |  #        | HASH
+#define de_sect      HASH
+//  $  |  $        | DLLR
+#define de_dllr      DLLR
+//  %  |  %        | PRCNT
+#define de_prcnt     PRCNT
+//  &  |  ^        | CARET
+#define de_amps      CARET
+//  /  |  &        | AMPS
+#define de_fslh      AMPS
+//  {  |  alt+123  | alt+123
+#define m_de_lbrc    &kp KP_N1 &kp KP_N2 &kp KP_N3
+//  (  |  *        | STAR
+#define de_lpar      STAR
+//  [  |  alt+91   | alt+91
+#define m_de_lbkt    &kp KP_N9 &kp KP_N1
+//  )  |  (        | LPAR
+#define de_rpar      LPAR
+//  ]  |  alt+93   | alt+93
+#define m_de_rbkt    &kp KP_N9 &kp KP_N3
+//  =  |  )        | RPAR
+#define de_equal     RPAR
+//  }  |  alt+125  | alt+125
+#define m_de_rbrc    &kp KP_N1 &kp KP_N2 &kp KP_N5
+//  ?  |  _        | UNDER
+#define de_qmark     UNDER
+//  \  |  alt+92   | alt+92
+#define m_de_bslh    &kp KP_N9 &kp KP_N2
+//  ´  |  =        | EQUAL
+#define de_btick     EQUAL
+//  `  |  +        | PLUS
+#define de_tick      PLUS
+//  @  |  alt+64   | alt+64
+#define m_de_at      &kp KP_N6 &kp KP_N4
+//  €  |  alt+128  | alt+128
+#define m_de_euro    &kp KP_N1 &kp KP_N2 &kp KP_N8
+//  +  |  ]        | RBKT
+#define de_plus      RBKT
+//  *  |  }        | RBRC
+#define de_star      RBRC
+//  ~  |  alt+126  | alt+126
+#define m_de_tilde   &kp KP_N1 &kp KP_N2 &kp KP_N6
+//  #  |  \        | BSLH
+#define de_hash      BSLH
+//  '  |  |        | PIPE
+#define de_sqt       PIPE
+//  <  |  \        | alt+60
+#define m_de_lt      &kp KP_N6 &kp KP_N0
+//  >  |  |        | alt+62
+#define m_de_gt      &kp KP_N6 &kp KP_N2
+//  |  |  alt+124  | alt+124
+#define m_de_pipe    &kp KP_N1 &kp KP_N2 &kp KP_N4
+//  µ  |  alt+230  | alt+230
+#define m_de_micro   &kp KP_N2 &kp KP_N3 &kp KP_N0
+//  ,  |  ,        | COMMA
+#define de_comma     COMMA
+//  ;  |  <        | LT
+#define de_semi      LT
+//  .  |  .        | DOT
+#define de_dot       DOT
+//  :  |  >        | GT
+#define de_colon     GT
+//  -  |  /        | FSLH
+#define de_minus     FSLH
+//  _  |  ?        | QMARK
+#define de_under     QMARK
 
-        // Umlauts Small
-        // ä
-        combo_3547 {
-            timeout-ms = <75>;
-            key-positions = <35 47>;
-            layers = <0>;
-            bindings = <&de_ael>;
-        };
-        // ö
-        combo_4462 {
-            timeout-ms = <75>;
-            key-positions = <44 62>;
-            layers = <0>;
-            bindings = <&de_oel>;
-        };
-        // ü
-        combo_3042 {
-            timeout-ms = <75>;
-            key-positions = <30 42>;
-            layers = <0>;
-            bindings = <&de_uel>;
-        };
-        // ß
-        combo_3749 {
-            timeout-ms = <75>;
-            key-positions = <37 49>;
-            layers = <0>;
-            bindings = <&de_ss>;
-        };
+#define ZMK_HELPER_STRINGIFY(x) #x
+#define PRESS_ALT &macro_press &kp LALT
+#define RELEASE_ALT &macro_release &kp LALT
 
-        // Umlauts Large
-        // Ä
-        combo_523547 {
-            timeout-ms = <75>;
-            key-positions = <52 35 47>;
-            layers = <0>;
-            bindings = <&de_aeu>;
-        };
-        combo_573547 {
-            timeout-ms = <75>;
-            key-positions = <57 35 47>;
-            layers = <0>;
-            bindings = <&de_aeu>;
-        };
-        // Ö
-        combo_524462 {
-            timeout-ms = <75>;
-            key-positions = <52 44 62>;
-            layers = <0>;
-            bindings = <&de_oeu>;
-        };
-        combo_574462 {
-            timeout-ms = <75>;
-            key-positions = <57 44 62>;
-            layers = <0>;
-            bindings = <&de_oeu>;
-        };
-        // Ü
-        combo_523042 {
-            timeout-ms = <75>;
-            key-positions = <52 30 42>;
-            layers = <0>;
-            bindings = <&de_ueu>;
-        };
-        combo_573042 {
-            timeout-ms = <75>;
-            key-positions = <57 30 42>;
-            layers = <0>;
-            bindings = <&de_ueu>;
-        };
-    };
-
-    macros {
-
-        de_ael: de_ael{
-            compatible = "zmk,behavior-macro";
-            label = "ZM_de_ael";
-            #binding-cells = <0>;
-            wait-ms = <30>;
-            tap-ms = <40>;
-            bindings = <&macro_press   &kp LALT>
-                     , <&macro_tap     &kp KP_N1 &kp KP_N3 &kp KP_N2>
-                     , <&macro_release &kp LALT>;
+#define SINGLE_KEY_MACRO(name, key_binding) \
+        macros { \
+            name: name { \
+                compatible = "zmk,behavior-macro"; \
+                label = ZMK_HELPER_STRINGIFY(SINGLE_KEY_MACRO_ ## name); \
+                #binding-cells = <0>; \
+                wait-ms = <0>; \
+                tap-ms = <0>; \
+                bindings = <&macro_tap &kp key_binding>; \
+            }; \
         };
 
-        de_aeu: de_aeu{
-            compatible = "zmk,behavior-macro";
-            label = "ZM_de_aeu";
-            #binding-cells = <0>;
-            wait-ms = <30>;
-            tap-ms = <40>;
-            bindings = <&macro_press   &kp LALT>
-                     , <&macro_tap     &kp KP_N1 &kp KP_N4 &kp KP_N2>
-                     , <&macro_release &kp LALT>;
+#define ALT_MACRO(name, alt_code_bindings) \
+        macros { \
+            name: name { \
+                compatible = "zmk,behavior-macro"; \
+                label = ZMK_HELPER_STRINGIFY(ALT_MACRO_ ## name); \
+                #binding-cells = <0>; \
+                wait-ms = <30>; \
+                tap-ms = <40>; \
+                bindings = <PRESS_ALT> \
+                         , <&macro_tap alt_code_bindings> \
+                         , <RELEASE_ALT>; \
+            }; \
         };
 
-        de_oel: de_oel{
-            compatible = "zmk,behavior-macro";
-            label = "ZM_de_oel";
-            #binding-cells = <0>;
-            wait-ms = <30>;
-            tap-ms = <40>;
-            bindings = <&macro_press   &kp LALT>
-                     , <&macro_tap     &kp KP_N1 &kp KP_N4 &kp KP_N8>
-                     , <&macro_release &kp LALT>;
+#define MORPH_ON_SHIFT(name, key_binding, shifted_key_binding) \
+        behaviors { \
+            name: name { \
+                compatible = "zmk,behavior-mod-morph"; \
+                label = ZMK_HELPER_STRINGIFY(MORPH_ON_SHIFT_ ## name); \
+                #binding-cells = <0>; \
+                bindings = <key_binding> \
+                         , <shifted_key_binding>; \
+                mods = <(MOD_LSFT|MOD_RSFT)>; \
+            }; \
         };
 
-        de_oeu: de_oeu{
-            compatible = "zmk,behavior-macro";
-            label = "ZM_de_oeu";
-            #binding-cells = <0>;
-            wait-ms = <30>;
-            tap-ms = <40>;
-            bindings = <&macro_press   &kp LALT>
-                     , <&macro_tap     &kp KP_N1 &kp KP_N5 &kp KP_N3>
-                     , <&macro_release &kp LALT>;
+#define HOLD_TAP(name, binding_tap, binding_hold) \
+        behaviors { \
+            name: name { \
+                compatible = "zmk,behavior-hold-tap"; \
+                label = ZMK_HELPER_STRINGIFY(HOLD_TAP_ ## name); \
+                #binding-cells = <2>; \
+                flavor = "tap-preferred"; \
+                tapping-term-ms = <200>; \
+                quick-tap-ms = <125>; \
+                global-quick-tap; \
+                bindings = <binding_tap>, <binding_hold>; \
+            }; \
         };
 
-        de_uel: de_uel{
-            compatible = "zmk,behavior-macro";
-            label = "ZM_de_uel";
-            #binding-cells = <0>;
-            wait-ms = <30>;
-            tap-ms = <40>;
-            bindings = <&macro_press   &kp LALT>
-                     , <&macro_tap     &kp KP_N1 &kp KP_N2 &kp KP_N9>
-                     , <&macro_release &kp LALT>;
+#define TWO_KEY_COMBO1(key_binding, key1, key2, on_layer) \
+        combos{ \
+            compatible = "zmk,combos"; \
+            combo_ ## key1 ## key2{ \
+                timeout-ms = <75>; \
+                key-positions = <key1 key2>; \
+                layers = <on_layer>; \
+                bindings = <&kp key_binding>; \
+            }; \
         };
 
-        de_ueu: de_ueu{
-            compatible = "zmk,behavior-macro";
-            label = "ZM_de_ueu";
-            #binding-cells = <0>;
-            wait-ms = <30>;
-            tap-ms = <40>;
-            bindings = <&macro_press   &kp LALT>
-                     , <&macro_tap     &kp KP_N1 &kp KP_N5 &kp KP_N4>
-                     , <&macro_release &kp LALT>;
+#define TWO_KEY_COMBO2(key_binding, key1, key2, on_layer) \
+        combos{ \
+            compatible = "zmk,combos"; \
+            combo_ ## key1 ## key2{ \
+                timeout-ms = <75>; \
+                key-positions = <key1 key2>; \
+                layers = <on_layer>; \
+                bindings = <key_binding>; \
+            }; \
         };
 
-        de_ss: de_ss{
-            compatible = "zmk,behavior-macro";
-            label = "ZM_de_ss";
-            #binding-cells = <0>;
-            wait-ms = <30>;
-            tap-ms = <40>;
-            bindings = <&macro_press   &kp LALT>
-                     , <&macro_tap     &kp KP_N0 &kp KP_N2 &kp KP_N2 &kp KP_N3>
-                     , <&macro_release &kp LALT>;
-        };
+#define SHIFTABLE_PAIR(name, lower, upper) \
+    SINGLE_KEY_MACRO(name ## _lower, lower) \
+    SINGLE_KEY_MACRO(name ## _upper, upper) \
+    MORPH_ON_SHIFT(name, &name ## _lower, &name ## _upper)
 
-    };
+// umlauts
+SHIFTABLE_PAIR(de_ae, m_de_ael, m_de_aeu)
+SHIFTABLE_PAIR(de_oe, m_de_oel, m_de_oeu)
+SHIFTABLE_PAIR(de_ue, m_de_uel, m_de_ueu)
+
+// alt macros for eng --> deu non-existant mappings
+ALT_MACRO(de_lbrc , m_de_lbrc)
+ALT_MACRO(de_lbkt , m_de_lbkt)
+ALT_MACRO(de_rbkt , m_de_rbkt)
+ALT_MACRO(de_rbrc , m_de_rbrc)
+ALT_MACRO(de_bslh , m_de_bslh)
+ALT_MACRO(de_at   , m_de_at)
+ALT_MACRO(de_euro , m_de_euro)
+ALT_MACRO(de_tilde, m_de_tilde)
+ALT_MACRO(de_lt   , m_de_lt)
+ALT_MACRO(de_gt   , m_de_gt)
+ALT_MACRO(de_pipe , m_de_pipe)
+ALT_MACRO(de_micro, m_de_micro)
+
+// parentheses
+TWO_KEY_COMBO2(&de_lbrc, 15, 27, 0)
+TWO_KEY_COMBO1(de_lpar , 27, 39, 0)
+TWO_KEY_COMBO2(&de_lbkt, 39, 51, 0)
+TWO_KEY_COMBO2(&de_rbrc, 16, 28, 0)
+TWO_KEY_COMBO1(de_rpar , 28, 40, 0)
+TWO_KEY_COMBO2(&de_rbkt, 40, 58, 0)
+
+HOLD_TAP(q_at, &kp q, &de_at)
