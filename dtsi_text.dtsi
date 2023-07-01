@@ -129,6 +129,18 @@
         }; \
     };
 
+#define STD_MACRO(name, key_bindings) \
+    macros { \
+        name: name { \
+            compatible = "zmk,behavior-macro"; \
+            label = ZMK_HELPER_STRINGIFY(STD_MACRO_ ## name); \
+            #binding-cells = <0>; \
+            wait-ms = <30>; \
+            tap-ms = <40>; \
+            bindings = <&macro_tap key_bindings>; \
+        }; \
+    };
+
 #define MORPH_ON_SHIFT(name, key_binding, shifted_key_binding) \
     behaviors { \
         name: name { \
@@ -283,3 +295,11 @@ TWO_KEY_COMBO1(de_star, 30, 42, 0)
 TWO_KEY_COMBO1(de_plus, 42, 60, 0)
 TWO_KEY_COMBO2(&de_bslh, 31, 43, 0)
 TWO_KEY_COMBO1(de_minus, 43, 61, 0)
+
+// multi-input macros
+STD_MACRO(save_all, &kp LC(K) &kp S)
+STD_MACRO(sel_left, &kp RIGHT_SHIFT &kp HOME)
+STD_MACRO(sel_right, &kp RIGHT_SHIFT &kp END)
+STD_MACRO(sel_row, &kp HOME &kp RIGHT_SHIFT &kp END)
+
+// s-expression manipulation
