@@ -301,6 +301,7 @@ STD_MACRO(save_all , &kp LC(K) &kp S)
 STD_MACRO(sel_left , &kp RIGHT_SHIFT &kp HOME)
 STD_MACRO(sel_right, &kp RIGHT_SHIFT &kp END)
 STD_MACRO(sel_row  , &kp HOME &kp RIGHT_SHIFT &kp END)
+STD_MACRO(sel_all  , &kp LA(LC(W)) &kp SPACE)
 
 // s-expression manipulation
 STD_MACRO(wrap_map , &kp LA(LC(R)) &kp LA(LC(H)))
@@ -308,3 +309,7 @@ STD_MACRO(wrap_set , &kp LA(LC(R)) &kp LA(LC(C)))
 STD_MACRO(wrap_list, &kp LA(LC(R)) &kp LA(LC(P)))
 STD_MACRO(wrap_vec , &kp LA(LC(R)) &kp LA(LC(S)))
 STD_MACRO(wrap_str , &kp LA(LC(R)) &kp LA(LC(Q)))
+
+// repl control
+STD_MACRO(jack_in   , &kp LA(LC(C)) &kp LA(LC(J)))
+STD_MACRO(interrupt , &kp LA(LC(C)) &kp LA(LC(D)))
