@@ -15,8 +15,8 @@
 
         Mapping
  DEU | ENG       | NAME
-  y  |  z        | z
-  z  |  y        | y
+  y  |  z        | Z
+  z  |  y        | Y
 
   ä  |  '        | SQT
   Ä  |  "        | DQT
@@ -30,7 +30,7 @@
   °  |  ~        | TILDE
   !  |  !        | EXCL
   "  |  @        | AT
-  ²  |  alt+235  | alt+235
+  ²  |  alt+0178 | alt+0178
   ³  |  alt+0179 | alt+0179
   §  |  #        | HASH
   $  |  $        | DLLR
@@ -49,7 +49,7 @@
   ´  |  =        | EQUAL
   `  |  +        | PLUS
   @  |  alt+64   | alt+64
-  €  |  alt+128  | alt+128
+  €  |  alt+0128 | alt+0128
   +  |  ]        | RBKT
   *  |  }        | RBRC
   ~  |  alt+126  | alt+126
