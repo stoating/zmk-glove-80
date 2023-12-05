@@ -220,7 +220,7 @@ behaviors {
 };
 
 #define TWO_KEY_COMBO1(key_binding, key1, key2, on_layer) \
-    combo_##key1##key2{ \
+    combo_ ## key1 ## key2{ \
         timeout-ms = <75>; \
         key-positions = <key1 key2>; \
         layers = <on_layer>; \
@@ -228,7 +228,7 @@ behaviors {
     };
 
 #define TWO_KEY_COMBO2(key_binding, key1, key2, on_layer) \
-    combo_##key1##key2{ \
+    combo_ ## key1 ## key2{ \
         timeout-ms = <75>; \
         key-positions = <key1 key2>; \
         layers = <on_layer>; \
