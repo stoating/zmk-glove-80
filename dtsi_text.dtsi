@@ -220,25 +220,19 @@ behaviors {
 };
 
 #define TWO_KEY_COMBO1(key_binding, key1, key2, on_layer) \
-    combos{ \
-        compatible = "zmk,combos"; \
-        combo_ ## key1 ## key2{ \
-            timeout-ms = <75>; \
-            key-positions = <key1 key2>; \
-            layers = <on_layer>; \
-            bindings = <&kp key_binding>; \
-        }; \
+    combo_##key1##key2{ \
+        timeout-ms = <75>; \
+        key-positions = <key1 key2>; \
+        layers = <on_layer>; \
+        bindings = <&kp key_binding>; \
     };
 
 #define TWO_KEY_COMBO2(key_binding, key1, key2, on_layer) \
-    combos{ \
-        compatible = "zmk,combos"; \
-        combo_ ## key1 ## key2{ \
-            timeout-ms = <75>; \
-            key-positions = <key1 key2>; \
-            layers = <on_layer>; \
-            bindings = <key_binding>; \
-        }; \
+    combo_##key1##key2{ \
+        timeout-ms = <75>; \
+        key-positions = <key1 key2>; \
+        layers = <on_layer>; \
+        bindings = <key_binding>; \
     };
 
 #define SHIFTABLE_PAIR(name, lower, upper) \
@@ -267,34 +261,38 @@ ALT_MACRO(de_gt   , m_de_gt)
 ALT_MACRO(de_pipe , m_de_pipe)
 ALT_MACRO(de_micro, m_de_micro)
 
-// parentheses
-TWO_KEY_COMBO2(&de_lbrc, 15, 27, 0)
-TWO_KEY_COMBO1(de_lpar , 27, 39, 0)
-TWO_KEY_COMBO2(&de_lbkt, 39, 51, 0)
-TWO_KEY_COMBO2(&de_rbrc, 16, 28, 0)
-TWO_KEY_COMBO1(de_rpar , 28, 40, 0)
-TWO_KEY_COMBO2(&de_rbkt, 40, 58, 0)
+combos {
+    compatible = "zmk,combos";
 
-// slashes
-TWO_KEY_COMBO1(de_fslh , 26, 38, 0)
-TWO_KEY_COMBO2(&de_bslh, 29, 41, 0)
+    // parentheses
+    TWO_KEY_COMBO2(&de_lbrc, 15, 27, 0)
+    TWO_KEY_COMBO1(de_lpar , 27, 39, 0)
+    TWO_KEY_COMBO2(&de_lbkt, 39, 51, 0)
+    TWO_KEY_COMBO2(&de_rbrc, 16, 28, 0)
+    TWO_KEY_COMBO1(de_rpar , 28, 40, 0)
+    TWO_KEY_COMBO2(&de_rbkt, 40, 58, 0)
 
-// logical operators
-TWO_KEY_COMBO2(&de_pipe, 23, 35, 0)
-TWO_KEY_COMBO1(de_amps , 24, 36, 0)
-TWO_KEY_COMBO1(de_equal, 25, 37, 0)
-TWO_KEY_COMBO2(&de_lt  , 35, 47, 0)
-TWO_KEY_COMBO2(&de_gt  , 36, 48, 0)
-TWO_KEY_COMBO1(de_excl , 37, 49, 0)
+    // slashes
+    TWO_KEY_COMBO1(de_fslh , 26, 38, 0)
+    TWO_KEY_COMBO2(&de_bslh, 29, 41, 0)
 
-// anonymous function
-TWO_KEY_COMBO1(de_hash, 38, 50, 0)
+    // logical operators
+    TWO_KEY_COMBO2(&de_pipe, 23, 35, 0)
+    TWO_KEY_COMBO1(de_amps , 24, 36, 0)
+    TWO_KEY_COMBO1(de_equal, 25, 37, 0)
+    TWO_KEY_COMBO2(&de_lt  , 35, 47, 0)
+    TWO_KEY_COMBO2(&de_gt  , 36, 48, 0)
+    TWO_KEY_COMBO1(de_excl , 37, 49, 0)
 
-// math
-TWO_KEY_COMBO1(de_star, 30, 42, 0)
-TWO_KEY_COMBO1(de_plus, 42, 60, 0)
-TWO_KEY_COMBO2(&de_bslh, 31, 43, 0)
-TWO_KEY_COMBO1(de_minus, 43, 61, 0)
+    // anonymous function
+    TWO_KEY_COMBO1(de_hash, 38, 50, 0)
+
+    // math
+    TWO_KEY_COMBO1(de_star, 30, 42, 0)
+    TWO_KEY_COMBO1(de_plus, 42, 60, 0)
+    TWO_KEY_COMBO2(&de_bslh, 31, 43, 0)
+    TWO_KEY_COMBO1(de_minus, 43, 61, 0)
+};
 
 // multi-input macros
 STD_MACRO(save_all , &kp LC(K) &kp S)
