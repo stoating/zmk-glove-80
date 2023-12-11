@@ -294,9 +294,6 @@ combos {
     TWO_KEY_COMBO1(de_minus, 43, 61, 0)
 };
 
-// single-input macros
-STD_MACRO(mul_paste, &kp LGUI(V))
-
 // multi-input macros
 STD_MACRO(save_all , &kp LC(K) &kp S)
 STD_MACRO(sel_left , &kp RIGHT_SHIFT &kp HOME)
